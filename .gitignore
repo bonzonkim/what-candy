@@ -232,6 +232,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+#custom build folder for next.js
+/.build/
+
 # End of https://www.toptal.com/developers/gitignore/api/nextjs
 
 
