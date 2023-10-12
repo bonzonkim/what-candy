@@ -1,5 +1,9 @@
 import React from "react";
-import { Box, Button, Container,Text } from '@chakra-ui/react';
+import {
+        Box,
+        Button,
+        Container,
+        Text } from '@chakra-ui/react';
 import Link from 'next/link';
 
 
@@ -7,7 +11,7 @@ import Link from 'next/link';
 
 export default function Home() {
     return(
-        <div>
+        <>
                 <Container alignItems="center">
                     <Box backgroundColor="brand.600"
                             borderRadius="lg"
@@ -23,7 +27,6 @@ export default function Home() {
                             </Link>
                     </Box>
                 </Container>
-
-        </div>
+        </>
     )
 }
