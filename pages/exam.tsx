@@ -1,9 +1,20 @@
 import React from "react";
+import {
+    Box,
+    Container,
+    Text,
+    Button
+} from '@chakra-ui/react';
+import Quiz from '../components/quiz/testquiz';
 
 export default function Exam() {
     return(
-        <div>
-            <h1>Exam</h1>
-        </div>
+        <>
+            <Container>
+                <Box>
+                    <Quiz/>
+                </Box>
+            </Container>
+        </>
 )
 }
