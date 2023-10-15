@@ -5,16 +5,21 @@ import {
     Text,
     Button
 } from '@chakra-ui/react';
+import { QuizSection, QuizSectionTitle } from "../layouts/QuizSection";
 
 const quiz = () => {
     return (
         <>
             <Container alignItems="center">
                 <Box>
-                    <Text>나는 사과가 좋다!!!</Text>
-                    <Button>yes</Button>
-                    <Button>no</Button>
-                    <h1>hi</h1>
+                    <QuizSection>
+                        <QuizSectionTitle>
+                            <Text>첫번째</Text>
+                            <Text>첫번째</Text>
+                            <Text>첫번째</Text>
+                            <Text>첫번째</Text>
+                        </QuizSectionTitle>
+                    </QuizSection>
                 </Box>
             </Container>
         </>
