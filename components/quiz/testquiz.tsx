@@ -14,6 +14,7 @@ const quiz = () => {
                     <Text>나는 사과가 좋다!!!</Text>
                     <Button>yes</Button>
                     <Button>no</Button>
+                    <h1>hi</h1>
                 </Box>
             </Container>
         </>
