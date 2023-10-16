@@ -13,7 +13,7 @@ const colors = {
 const styles = {
     global: (props: Record<string, any> | StyleFunctionProps) => ({
         body:{
-            bg: mode('brand.700', 'brand.900')(props)
+            bg: mode('brand.900', 'brand.900')(props)
         }
     })
 }

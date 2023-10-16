@@ -11,14 +11,16 @@ const quiz = () => {
     return (
         <>
             <Container alignItems="center">
-                <Box>
+                <Box textAlign="center">
                     <QuizSection>
-                        <QuizSectionTitle>
-                            <Text>첫번째</Text>
-                            <Text>첫번째</Text>
-                            <Text>첫번째</Text>
-                            <Text>첫번째</Text>
-                        </QuizSectionTitle>
+                        <Text fontSize="2xl" mb={2}>
+                           1. 
+                        </Text>
+                        <Text fontSize="1xl" mb={4}>
+                            나는 휴일에 집에서 쉬는게 더 좋다.
+                        </Text>
+                        <Button>Yes</Button>
+                        <Button>No</Button>
                     </QuizSection>
                 </Box>
             </Container>
