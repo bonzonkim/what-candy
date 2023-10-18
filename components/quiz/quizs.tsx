@@ -1,47 +1,73 @@
 import React from "react";
 import {
-    Box,
-    Container,
     Text,
     Button
 } from '@chakra-ui/react';
 import { QuizSection, QuizSectionContent, QuizButton } from "../layouts/QuizLayout";
 
-const Quiz1 = () => {
-    return (
-        <>
+    const Quiz1 = () => {
+        return (
+            <>
                     <QuizSection>
                         <QuizSectionContent>
-                        <Text fontSize="2xl" mb={4}>
-                            나는 휴일에 집에서 쉬는게 더 좋다.
-                        </Text>
-                       <QuizButton>
-                        <Button>Yes</Button>
-                        <Text fontSize="2xl">OR</Text>
-                        <Button>No</Button>
-                        </QuizButton>
+                        <Text fontSize="2xl" mb={4}>나는 휴일에 집에서 쉬는게 더 좋다.</Text>
                         </QuizSectionContent>
                     </QuizSection>
-        </>
-    )
+            </>
+        )
+    }
+
+    const Quiz2 = () => {
+        return (
+            <>
+                    <QuizSection>
+                        <QuizSectionContent>
+                        <Text fontSize="2xl" mb={4}>asdf</Text>
+                        </QuizSectionContent>
+                    </QuizSection>
+            </>
+        )
+    }
+
+    const Quiz3 = () => {
+        return (
+            <>
+                    <QuizSection>
+                        <QuizSectionContent>
+                        <Text fontSize="2xl" mb={4}>this is quiz 3</Text>
+                        </QuizSectionContent>
+                    </QuizSection>
+            </>
+        )
+    }
+    const EndOfQuiz = () => {
+        return (
+            <>
+                    <QuizSection>
+                        <QuizSectionContent>
+                        <Text fontSize="2xl" mb={4}>END</Text>
+                        </QuizSectionContent>
+                    </QuizSection>
+            </>
+        )
+    }
+function Quiz (props:any) {
+    let quizNum = props.quizNum
+
+    if (quizNum === 1)  {
+        return <Quiz1 />
+    }
+    if (quizNum === 2) {
+        return <Quiz2/>
+    }
+    if (quizNum === 3) {
+        return <Quiz3/>
+    }
+    else {
+        return <EndOfQuiz />
+    }
+
+
 }
 
-const Quiz2 = () => {
-    return (
-        <>
-                    <QuizSection>
-                        <QuizSectionContent>
-                        <Text fontSize="2xl" mb={4}>
-                        asdfadsf
-                    </Text>
-                       <QuizButton>
-                        <Button>Yes</Button>
-                        <Text fontSize="2xl">OR</Text>
-                        <Button>No</Button>
-                        </QuizButton>
-                        </QuizSectionContent>
-                    </QuizSection>
-        </>
-    )
-}
-export { Quiz1, Quiz2 };
+export default Quiz;
