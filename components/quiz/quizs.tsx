@@ -1,16 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     Text,
     Button
 } from '@chakra-ui/react';
 import { QuizSection, QuizSectionContent, QuizButton } from "../layouts/QuizLayout";
 
+export default function Quiz () {
+
+const [ quizNumber, setQuizNumber ] = useState(1);
+
+function changeQuiz() {
+        setQuizNumber(quizNumber + 1);
+}
     const Quiz1 = () => {
         return (
             <>
                     <QuizSection>
                         <QuizSectionContent>
                         <Text fontSize="2xl" mb={4}>나는 휴일에 집에서 쉬는게 더 좋다.</Text>
+                    <QuizButton onClick={changeQuiz}>yes</QuizButton>
+                    <QuizButton onClick={changeQuiz}>no</QuizButton>
                         </QuizSectionContent>
                     </QuizSection>
             </>
@@ -23,6 +32,8 @@ import { QuizSection, QuizSectionContent, QuizButton } from "../layouts/QuizLayo
                     <QuizSection>
                         <QuizSectionContent>
                         <Text fontSize="2xl" mb={4}>asdf</Text>
+                    <QuizButton onClick={changeQuiz}>yes</QuizButton>
+                    <QuizButton onClick={changeQuiz}>no</QuizButton>
                         </QuizSectionContent>
                     </QuizSection>
             </>
@@ -35,6 +46,8 @@ import { QuizSection, QuizSectionContent, QuizButton } from "../layouts/QuizLayo
                     <QuizSection>
                         <QuizSectionContent>
                         <Text fontSize="2xl" mb={4}>this is quiz 3</Text>
+                    <QuizButton onClick={changeQuiz}>yes</QuizButton>
+                    <QuizButton onClick={changeQuiz}>no</QuizButton>
                         </QuizSectionContent>
                     </QuizSection>
             </>
@@ -51,21 +64,20 @@ import { QuizSection, QuizSectionContent, QuizButton } from "../layouts/QuizLayo
             </>
         )
     }
-function Quiz (props:any) {
-    let quizNum = props.quizNum
+    //let quizNum = props.quizNum
 
-    switch(quizNum) {
+    switch(quizNumber) {
         case 1: {
-            console.log(quizNum)
+            console.log(quizNumber)
             return <Quiz1/>
         }
 
         case 2: {
-            console.log(quizNum)
+            console.log(quizNumber)
             return <Quiz2/>
         }
         case 3: {
-            console.log(quizNum)
+            console.log(quizNumber)
             return <Quiz3/>
         }
         default: {
@@ -90,4 +102,4 @@ function Quiz (props:any) {
 
 }
 
-export default Quiz;
+//export default Quiz;

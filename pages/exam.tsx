@@ -21,11 +21,11 @@ function changeQuiz() {
             <Container alignItems="center">
                 <Box textAlign="center">
                     <Quiz
-                        quizNum={quizNumber}
+//                        quizNum={quizNumber}
                     />
-                        <QuizButton onClick={changeQuiz}>Yes</QuizButton>
+                    {/*<QuizButton onClick={changeQuiz}>Yes</QuizButton>*/}
                         {/*<Text fontSize="2xl">OR</Text>*/}
-                        <QuizButton onClick={changeQuiz}>No</QuizButton>
+                        {/*<QuizButton onClick={changeQuiz}>No</QuizButton>*/}
                 </Box>
             </Container>
         </>
