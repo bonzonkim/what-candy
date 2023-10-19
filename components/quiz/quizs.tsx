@@ -54,18 +54,38 @@ import { QuizSection, QuizSectionContent, QuizButton } from "../layouts/QuizLayo
 function Quiz (props:any) {
     let quizNum = props.quizNum
 
-    if (quizNum === 1)  {
-        return <Quiz1 />
+    switch(quizNum) {
+        case 1: {
+            console.log(quizNum)
+            return <Quiz1/>
+        }
+
+        case 2: {
+            console.log(quizNum)
+            return <Quiz2/>
+        }
+        case 3: {
+            console.log(quizNum)
+            return <Quiz3/>
+        }
+        default: {
+            console.log('end of quiz!')
+            return <EndOfQuiz />
+        }
     }
-    if (quizNum === 2) {
-        return <Quiz2/>
-    }
-    if (quizNum === 3) {
-        return <Quiz3/>
-    }
-    else {
-        return <EndOfQuiz />
-    }
+
+    //if (quizNum === 1)  {
+    //    return <Quiz1/>
+    //}
+    //if (quizNum === 2) {
+    //    return <Quiz2/>
+    //}
+    //if (quizNum === 3) {
+    //    return <Quiz3/>
+    //}
+    //else {
+    //    return <EndOfQuiz />
+    //}
 
 
 }
