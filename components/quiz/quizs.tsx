@@ -18,8 +18,8 @@ function changeQuiz() {
                     <QuizSection>
                         <QuizSectionContent>
                         <Text fontSize="2xl" mb={4}>나는 휴일에 집에서 쉬는게 더 좋다.</Text>
-                    <QuizButton onClick={changeQuiz}>yes</QuizButton>
-                    <QuizButton onClick={changeQuiz}>no</QuizButton>
+                        <QuizButton onClick={changeQuiz}>yes</QuizButton>
+                        <QuizButton onClick={changeQuiz}>no</QuizButton>
                         </QuizSectionContent>
                     </QuizSection>
             </>
@@ -32,8 +32,8 @@ function changeQuiz() {
                     <QuizSection>
                         <QuizSectionContent>
                         <Text fontSize="2xl" mb={4}>asdf</Text>
-                    <QuizButton onClick={changeQuiz}>yes</QuizButton>
-                    <QuizButton onClick={changeQuiz}>no</QuizButton>
+                        <QuizButton onClick={changeQuiz}>yes</QuizButton>
+                        <QuizButton onClick={changeQuiz}>no</QuizButton>
                         </QuizSectionContent>
                     </QuizSection>
             </>
@@ -46,8 +46,8 @@ function changeQuiz() {
                     <QuizSection>
                         <QuizSectionContent>
                         <Text fontSize="2xl" mb={4}>this is quiz 3</Text>
-                    <QuizButton onClick={changeQuiz}>yes</QuizButton>
-                    <QuizButton onClick={changeQuiz}>no</QuizButton>
+                        <QuizButton onClick={changeQuiz}>yes</QuizButton>
+                        <QuizButton onClick={changeQuiz}>no</QuizButton>
                         </QuizSectionContent>
                     </QuizSection>
             </>
@@ -64,7 +64,6 @@ function changeQuiz() {
             </>
         )
     }
-    //let quizNum = props.quizNum
 
     switch(quizNumber) {
         case 1: {
@@ -86,20 +85,5 @@ function changeQuiz() {
         }
     }
 
-    //if (quizNum === 1)  {
-    //    return <Quiz1/>
-    //}
-    //if (quizNum === 2) {
-    //    return <Quiz2/>
-    //}
-    //if (quizNum === 3) {
-    //    return <Quiz3/>
-    //}
-    //else {
-    //    return <EndOfQuiz />
-    //}
-
-
 }
 
-//export default Quiz;

@@ -13,5 +13,5 @@ export const QuizSectionContent = styled.div`
 `;
 
 export const QuizButton = styled.button`
-    justify-content: space-around;
+    padding: 25px;
 `;
