@@ -2,7 +2,7 @@ import Head from 'next/head';
 import {Container, Box} from "@chakra-ui/react";
 
 
-const Main = ({children}) => {
+const Main = ({children}:any) => {
     return(
         <>
             <Head>

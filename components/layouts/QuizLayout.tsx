@@ -12,7 +12,6 @@ export const QuizSectionContent = styled.div`
     padding-top: 20px;
 `;
 
-export const QuizButton = styled.div`
-    display: flex;
+export const QuizButton = styled.button`
     justify-content: space-around;
 `;

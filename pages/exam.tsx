@@ -23,11 +23,9 @@ function changeQuiz() {
                     <Quiz
                         quizNum={quizNumber}
                     />
-                        <QuizButton>
-                        <Button onClick={changeQuiz}>Yes</Button>
-                        <Text fontSize="2xl">OR</Text>
-                        <Button onClick={changeQuiz}>No</Button>
-                        </QuizButton>
+                        <QuizButton onClick={changeQuiz}>Yes</QuizButton>
+                        {/*<Text fontSize="2xl">OR</Text>*/}
+                        <QuizButton onClick={changeQuiz}>No</QuizButton>
                 </Box>
             </Container>
         </>
