@@ -16,9 +16,9 @@ export default function Home() {
                 <Container alignItems="center">
                 <Section>
                     <Box backgroundColor="brand.600"
-                            borderRadius="lg"
+                            borderRadius="15px"
+                            mt={50}
                             p={4}
-                            mb={4}
                             textAlign="center">
                                 <Text fontSize="3xl" mb={4}>나와 닮은 탕후루는?!</Text>
                             <Link href="/exam">

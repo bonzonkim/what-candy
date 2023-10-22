@@ -9,11 +9,11 @@ const Main = ({children}:any) => {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <title>what-candy?!</title>
             </Head>
-            <Box>
                 <Container>
-                    {children}
+                    <Box>
+                        {children}
+                    </Box>
                 </Container>
-            </Box>
         </>
     )
 }
