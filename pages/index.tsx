@@ -5,6 +5,7 @@ import {
         Container,
         Text } from '@chakra-ui/react';
 import Link from 'next/link';
+import Section from '../components/Section';
 
 
 
@@ -13,6 +14,7 @@ export default function Home() {
     return(
         <>
                 <Container alignItems="center">
+                <Section>
                     <Box backgroundColor="brand.600"
                             borderRadius="lg"
                             p={4}
@@ -26,6 +28,7 @@ export default function Home() {
                                 시작하기</Button>
                             </Link>
                     </Box>
+                </Section>
                 </Container>
         </>
     )

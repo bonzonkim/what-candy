@@ -4,6 +4,7 @@ import {
     Button
 } from '@chakra-ui/react';
 import { QuizSection, QuizSectionContent, QuizButton } from "../layouts/QuizLayout";
+import Section from '../Section';
 
 export default function Quiz () {
 
@@ -15,6 +16,7 @@ function changeQuiz() {
     const Quiz1 = () => {
         return (
             <>
+                <Section>
                     <QuizSection>
                         <QuizSectionContent>
                         <Text fontSize="2xl" mb={4}>나는 휴일에 집에서 쉬는게 더 좋다.</Text>
@@ -22,6 +24,7 @@ function changeQuiz() {
                         <QuizButton onClick={changeQuiz}>no</QuizButton>
                         </QuizSectionContent>
                     </QuizSection>
+                </Section>
             </>
         )
     }
@@ -29,6 +32,7 @@ function changeQuiz() {
     const Quiz2 = () => {
         return (
             <>
+                <Section>
                     <QuizSection>
                         <QuizSectionContent>
                         <Text fontSize="2xl" mb={4}>asdf</Text>
@@ -36,6 +40,7 @@ function changeQuiz() {
                         <QuizButton onClick={changeQuiz}>no</QuizButton>
                         </QuizSectionContent>
                     </QuizSection>
+                </Section>
             </>
         )
     }
@@ -43,6 +48,7 @@ function changeQuiz() {
     const Quiz3 = () => {
         return (
             <>
+                <Section>
                     <QuizSection>
                         <QuizSectionContent>
                         <Text fontSize="2xl" mb={4}>this is quiz 3</Text>
@@ -50,17 +56,20 @@ function changeQuiz() {
                         <QuizButton onClick={changeQuiz}>no</QuizButton>
                         </QuizSectionContent>
                     </QuizSection>
+                </Section>
             </>
         )
     }
     const EndOfQuiz = () => {
         return (
             <>
+                <Section>
                     <QuizSection>
                         <QuizSectionContent>
                         <Text fontSize="2xl" mb={4}>END</Text>
                         </QuizSectionContent>
                     </QuizSection>
+                </Section>
             </>
         )
     }
