@@ -4,11 +4,12 @@ import {
 } from '@chakra-ui/react';
 import { QuizSection, QuizSectionContent, QuizButton } from "../layouts/QuizLayout";
 import Section from '../Section';
+import QuizSectionAnimate from '../QuizSectionAnimate';
 import Link from "next/link";
 
 
 export default function Quiz() {
-  const [quizNumber, setQuizNumber] = useState(1);
+  const [quizId, setQuizId] = useState(1);
 
   const quizData = [
     { question: '나는 휴일에 집에서 쉬는게 더 좋다.', id: 1 },
@@ -28,7 +29,7 @@ export default function Quiz() {
   ];
 
   function changeQuiz() {
-    setQuizNumber(quizNumber + 1);
+    setQuizId(quizId + 1);
   }
 
   function renderQuiz(id:number) {
@@ -36,13 +37,13 @@ export default function Quiz() {
     if (quiz) {
       return (
         <Section>
-          <QuizSection>
-            <QuizSectionContent>
-              <Text fontSize="2xl" mb={4}>{quiz.question}</Text>
-              <QuizButton onClick={changeQuiz}>yes</QuizButton>
-              <QuizButton onClick={changeQuiz}>no</QuizButton>
-            </QuizSectionContent>
-          </QuizSection>
+              <QuizSection>
+                <QuizSectionContent>
+                  <Text fontSize="2xl" mb={4}>{quiz.question}</Text>
+                  <QuizButton onClick={changeQuiz}>yes</QuizButton>
+                  <QuizButton onClick={changeQuiz}>no</QuizButton>
+                </QuizSectionContent>
+              </QuizSection>
         </Section>
       );
     } else {
@@ -65,8 +66,8 @@ export default function Quiz() {
     );
   };
 
-  console.log(quizNumber);
+  console.log(quizId);
 
-  return renderQuiz(quizNumber);
+  return renderQuiz(quizId);
 }
 

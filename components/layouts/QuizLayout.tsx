@@ -8,7 +8,6 @@ export const QuizSection = styled.section`
 `;
 
 export const QuizSectionContent = styled.div`
-    padding-bottom: 20px;
     padding-top: 20px;
 `;
 
