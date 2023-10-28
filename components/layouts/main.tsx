@@ -9,11 +9,11 @@ const Main = ({children}:any) => {
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <title>나에게 맞는 탕후루는</title>
-                <link rel="icon" href="../../public/favicon.ico"/>
+                <link rel="icon" href="/favicon.ico?v=2"/>
             </Head>
             <Navbar/>
-                <Container pt={10}>
-                    <Box>
+                <Container>
+                    <Box pt={100} >
                         {children}
                     </Box>
                 </Container>

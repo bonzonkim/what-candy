@@ -17,10 +17,13 @@ export default function Home() {
                 <Section>
                     <Box backgroundColor="brand.600"
                             borderRadius="15px"
-                            mt={50}
                             p={4}
                             textAlign="center">
-                                <Text fontSize="3xl" mb={4}>나와 닮은 탕후루는?!</Text>
+                                <Text fontSize="3xl"
+                                      mb={4}
+                                      color="white"   
+                                >
+                            나와 닮은 탕후루는?!</Text>
                             <Link href="/exam">
                                 <Button
                                 colorScheme="blue"

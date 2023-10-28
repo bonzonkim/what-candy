@@ -4,8 +4,8 @@ import {
 } from '@chakra-ui/react';
 import { QuizSection, QuizSectionContent, QuizButton } from "../layouts/QuizLayout";
 import Section from '../Section';
-import QuizSectionAnimate from '../QuizSectionAnimate';
 import Link from "next/link";
+import Theme from '../../libs/theme';
 
 
 export default function Quiz() {
