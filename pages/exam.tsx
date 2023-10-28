@@ -13,7 +13,9 @@ import Section from '../components/Section';
 export default function Exam() {
     return(
         <>
-            <Container alignItems="center">
+            <Container
+                alignItems="center"
+            >
                 <Section>
                 <Box textAlign="center">
                     <Quiz/>
