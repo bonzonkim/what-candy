@@ -4,8 +4,8 @@ import {
  Box,
  Heading,
  Link,
- Stack,
- Text,
+ Grid,
+ Center,
  Button
 } from '@chakra-ui/react'
 import { BsGithub, BsLinkedin, BsPersonCircle } from 'react-icons/bs'
@@ -14,6 +14,7 @@ import NextLink from 'next/link'
 
 const Navbar = () => {
     return (
+    <Center>
        <Box
         as="nav"
         bg="teal.500"
@@ -23,45 +24,39 @@ const Navbar = () => {
         top="0"
         alignItems="center"
         >
-            <Heading>
+            <Heading textAlign='center'>
                 What Candy are you
             </Heading>
             <Container>
-                <Stack
-                      direction={{base:'column', md: 'row' }}
-                      display={{  md: 'flex' }}
-                      flexGrow={1}
-                      mt={{ base: 4, nmd: 0 }}
-                      height={{base: 16, md: 20}} 
-                >
+                <Grid templateColumns='repeat(4, 1fr)' placeItems='center' >
                     <Link href="https://github.com/bonzonkim" target="_blank" as={NextLink}>
                         <Button
                             leftIcon={<BsGithub/>}
                             colorScheme="transparent"
-                        />
+                        >Github</Button>
                     </Link>
                     <Link href="https://www.linkedin.com/in/bumgu-kang-820010269/" target="_blank">
                         <Button
                             leftIcon={<BsLinkedin/>}
                             colorScheme="transparent"
-                        />
+                        >Linkedin</Button>
                     </Link>
                     <Link href="https://bumgu.com" target="_blank">
                         <Button
                             leftIcon={<BsPersonCircle/>}
                             colorScheme="transparent"
-                        />
+                        >Homepage</Button>
                     </Link>
                     <Link href="/">
                         <Button
                             leftIcon={<MdReplay/>}
                             colorScheme="transparent"
-                        /> 
+                        >다시하기</Button>
                     </Link>
-                </Stack>
-
+                </Grid>
             </Container>
         </Box> 
+    </Center>
     )
 } 
 

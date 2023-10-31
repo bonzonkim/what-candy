@@ -12,7 +12,7 @@ import Section from '../components/Section';
 
 export default function Home() {
     return(
-        <>
+        <Box pt={14}>
                 <Container alignItems="center">
                 <Section>
                     <Box backgroundColor="brand.600"
@@ -33,6 +33,6 @@ export default function Home() {
                     </Box>
                 </Section>
                 </Container>
-        </>
+        </Box>
     )
 }

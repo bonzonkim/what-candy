@@ -5,7 +5,6 @@ import {
 import { QuizSection, QuizSectionContent, QuizButton } from "../layouts/QuizLayout";
 import Section from '../Section';
 import Link from "next/link";
-import Theme from '../../libs/theme';
 
 
 export default function Quiz() {

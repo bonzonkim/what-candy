@@ -12,7 +12,7 @@ import Section from '../components/Section';
 
 export default function Exam() {
     return(
-        <>
+        <Box>
             <Container
                 alignItems="center"
             >
@@ -22,6 +22,6 @@ export default function Exam() {
                 </Box>
                 </Section>
             </Container>
-        </>
+        </Box>
 )
 }
