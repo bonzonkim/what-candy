@@ -15,18 +15,18 @@ export default function Home() {
         <Box pt={14}>
                 <Container alignItems="center">
                 <Section>
-                    <Box backgroundColor="brand.600"
+                    <Box backgroundColor="#ADEEE2"
                             borderRadius="15px"
                             p={4}
                             textAlign="center">
                                 <Text fontSize="3xl"
                                       mb={4}
-                                      color="white"   
+                                      color="black"   
                                 >
                             나와 닮은 탕후루는?!</Text>
                             <Link href="/exam">
                                 <Button
-                                colorScheme="blue"
+                                background="#A2DCEE"
                                 size="lg">
                                 시작하기</Button>
                             </Link>
