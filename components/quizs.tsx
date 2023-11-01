@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import {
   Text,
-  Grid, Button
+   Box
 } from '@chakra-ui/react';
-import { QuizSection, QuizSectionContent, QuizButton } from "../layouts/QuizLayout";
-import Section from '../Section';
+import Section from './Section';
 import Link from "next/link";
-import { YesButton, NoButton } from "../QuizButtons";
+import  DynamicButtons  from "./QuizButtons";
 
 
 export default function Quiz() {
@@ -48,13 +47,16 @@ export default function Quiz() {
     if (quiz) {
       return (
         <Section>
-              <QuizSection>
-                <QuizSectionContent>
-                  <Text fontSize="2xl" mb={4}>{quiz.question}</Text>
-                    <YesButton onClick={() => changeQuiz("yes")} />
-                    <NoButton onClick={() => changeQuiz("no")} />
-                </QuizSectionContent>
-              </QuizSection>
+            <Box
+            backgroundColor="brand.600"
+            borderRadius="15px"
+            p={4}
+            textAlign="center"
+            >
+              <Text fontSize="2xl" mb={4}>{quiz.question}</Text>
+                <DynamicButtons onClick={() => changeQuiz("yes")} ButtonText="YES" />
+                <DynamicButtons onClick={() => changeQuiz("no")} ButtonText="NO" />
+            </Box>
         </Section>
       );
     } else {
@@ -65,14 +67,17 @@ export default function Quiz() {
   const EndOfQuiz = () => {
     return (
       <Section>
-        <QuizSection>
-          <QuizSectionContent>
+                <Box
+                backgroundColor="brand.600"
+                borderRadius="15px"
+                p={4}
+                textAlign="center"
+                >
             <Text fontSize="2xl" mb={4}>END</Text>
             <Link href='/'>
-              <QuizButton>HOME</QuizButton>
+              <DynamicButtons ButtonText="Home"/>
             </Link>
-          </QuizSectionContent>
-        </QuizSection>
+                </Box>
       </Section>
     );
   };

@@ -17,7 +17,7 @@ const Navbar = () => {
     <Center>
        <Box
         as="nav"
-        bg="teal.500"
+        bg="transparent"
         color="white"
         position="fixed"
         w="100%"
@@ -27,30 +27,30 @@ const Navbar = () => {
             <Heading textAlign='center'>
                 What Candy are you
             </Heading>
-            <Container>
+            <Container p={10} >
                 <Grid templateColumns='repeat(4, 1fr)' placeItems='center' >
                     <Link href="https://github.com/bonzonkim" target="_blank" as={NextLink}>
                         <Button
                             leftIcon={<BsGithub/>}
-                            colorScheme="transparent"
+                            colorScheme="blackAlpha"
                         >Github</Button>
                     </Link>
                     <Link href="https://www.linkedin.com/in/bumgu-kang-820010269/" target="_blank">
                         <Button
                             leftIcon={<BsLinkedin/>}
-                            colorScheme="transparent"
+                            colorScheme="blackAlpha"
                         >Linkedin</Button>
                     </Link>
                     <Link href="https://bumgu.com" target="_blank">
                         <Button
                             leftIcon={<BsPersonCircle/>}
-                            colorScheme="transparent"
+                            colorScheme="blackAlpha"
                         >Homepage</Button>
                     </Link>
                     <Link href="/">
                         <Button
                             leftIcon={<MdReplay/>}
-                            colorScheme="transparent"
+                            colorScheme="blackAlpha"
                         >다시하기</Button>
                     </Link>
                 </Grid>

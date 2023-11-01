@@ -1,18 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import {
     Box,
     Container,
-    Text,
-    Button
 } from '@chakra-ui/react';
-import Quiz from '../components/quiz/quizs';
-import { QuizButton } from "../components/layouts/QuizLayout";
+import Quiz from '../components/quizs';
 import Section from '../components/Section';
 
 
 export default function Exam() {
     return(
-        <Box>
+        <Box pt={14}>
             <Container
                 alignItems="center"
             >
