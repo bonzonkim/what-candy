@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import {
   Text,
-   Box
+   Box,
+   Grid
 } from '@chakra-ui/react';
 import Section from './Section';
 import Link from "next/link";
@@ -38,7 +39,6 @@ export default function Quiz() {
         setPoint(point - quiz.points); 
       }
     setQuizId(quizId + 1);
-    console.log(`quiz points: ${point}`);
     }
   }
 
@@ -48,14 +48,21 @@ export default function Quiz() {
       return (
         <Section>
             <Box
-            backgroundColor="brand.600"
+            bgGradient="linear(red.100 0%, orange.100 25%, yellow.100 50%)"
+            //background="whatsapp.200"
             borderRadius="15px"
             p={4}
             textAlign="center"
             >
               <Text fontSize="2xl" mb={4}>{quiz.question}</Text>
-                <DynamicButtons onClick={() => changeQuiz("yes")} ButtonText="YES" />
-                <DynamicButtons onClick={() => changeQuiz("no")} ButtonText="NO" />
+                <Grid templateColumns='repeat(2,1fr)'>
+                    <Box>
+                        <DynamicButtons onClick={() => changeQuiz("yes")} ButtonText="YES" />
+                    </Box>
+                    <Box>
+                        <DynamicButtons onClick={() => changeQuiz("no")} ButtonText="NO"  />
+                    </Box>
+                </Grid>
             </Box>
         </Section>
       );
@@ -68,7 +75,7 @@ export default function Quiz() {
     return (
       <Section>
                 <Box
-                backgroundColor="brand.600"
+                bgGradient="linear(red.100 0%, orange.100 25%, yellow.100 50%)"
                 borderRadius="15px"
                 p={4}
                 textAlign="center"
@@ -83,6 +90,7 @@ export default function Quiz() {
   };
 
   console.log(quizId);
+  console.log(`quiz points: ${point}`);
 
   return renderQuiz(quizId);
 }

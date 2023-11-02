@@ -1,11 +1,12 @@
 import { Button } from "@chakra-ui/react"
 import React from "react"
 
-const DynamicButtons = ({onClick, ButtonText}: any) => {
+const DynamicButtons = ({onClick, ButtonText,p}: any) => {
     return (
     <Button 
         onClick={onClick}
-        colorScheme="blue"
+        p={p}
+        background="red.200"
         size="lg"
         >
         {ButtonText} </Button>

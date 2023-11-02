@@ -9,7 +9,7 @@ import Section from '../components/Section';
 
 export default function Exam() {
     return(
-        <Box pt={14}>
+        <Box>
             <Container
                 alignItems="center"
             >

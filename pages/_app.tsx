@@ -3,6 +3,7 @@ import Theme from '../libs/theme';
 import { ChakraProvider } from '@chakra-ui/react';
 import Layout from '../components/layouts/main';
 import { AnimatePresence } from 'framer-motion';
+import '../public/font.css'
 
 
 const App = ({ Component, pageProps }: AppProps) => {

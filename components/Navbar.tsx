@@ -11,22 +11,27 @@ import {
 import { BsGithub, BsLinkedin, BsPersonCircle } from 'react-icons/bs'
 import { MdReplay } from 'react-icons/md'
 import NextLink from 'next/link'
+import styled from "@emotion/styled";
 
+
+
+const CustomHeading = styled(Heading)`
+    font-family: 'Lilita One', sans-serif;
+`;
 const Navbar = () => {
     return (
-    <Center>
+    <Center p={14}>
        <Box
         as="nav"
-        bg="transparent"
-        color="white"
+        bg="blackAlpha.50"
         position="fixed"
         w="100%"
         top="0"
         alignItems="center"
         >
-            <Heading textAlign='center'>
+            <CustomHeading textAlign='center'>
                 What Candy are you
-            </Heading>
+            </CustomHeading>
             <Container p={10} >
                 <Grid templateColumns='repeat(4, 1fr)' placeItems='center' >
                     <Link href="https://github.com/bonzonkim" target="_blank" as={NextLink}>
