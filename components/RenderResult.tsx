@@ -1,9 +1,20 @@
 import React from 'react';
 import {
     Box,
+    Container,
+    Grid,
+    Heading,
     Text
 } from '@chakra-ui/react';
 import {useRouter} from 'next/router';
+import DynamicButton from '../components/DynamicButton';
+import Link from 'next/link';
+import {
+    FacebookShareButton,
+    RedditShareButton,
+    InstagramIcon,
+    FacebookIcon
+} from 'next-share'
 
 const results = [
     {fruit: 'shinemusket', resultText: '샤인머스켓'},
@@ -27,18 +38,51 @@ export default function ResultPage() {
 
     let selectedFruit = '';
 
-    if (point === 300) {
-        selectedFruit = 'blacksapphire'; //테스트 임의 지정
-    } else {
-        selectedFruit = 'pineapple'; //테스트 임의 지정
+
+    switch (point) {
+        case 300:
+            selectedFruit = 'blacksapphire';
+            break;
+        case 200:
+            selectedFruit = 'tomato';
+            break;
     }
 
 
 
     return (
-        <Box
-        >
-            <Text>당신은 {getResultText({fruit: selectedFruit})}</Text>
+        <Box>
+            <Container
+                alignItems="center"
+                backgroundColor="whitesmoke"
+                textAlign="center"
+                borderRadius="10px"
+            >
+                <Heading
+                    as='h1'
+                    letterSpacing={'tight'}
+                >
+                당신은 {getResultText({fruit: selectedFruit})}
+                </Heading>
+                <Text>당신은 밝고 어쩌고</Text>
+                <Grid templateColumns='repeat(2,1fr)'>
+                    <Link href='/'>
+                        <DynamicButton ButtonText="홈으로"/>
+                    </Link>
+                    <Link href='/exam'>
+                        <DynamicButton ButtonText="다시하기"/>
+                    </Link>
+                </Grid>
+                <Grid templateColumns='repeat(3,1fr)'>
+                    <Box>
+                        <FacebookShareButton
+                            url={'https://localhost:3000'}
+                        >
+                            <FacebookIcon size={32} round />
+                        </FacebookShareButton>
+                    </Box>
+                </Grid>
+            </Container>
         </Box>
     );
 };

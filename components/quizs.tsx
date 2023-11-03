@@ -7,7 +7,7 @@ import {
 import Section from './Section';
 import Link from 'next/link';
 import { useRouter} from 'next/router';
-import  DynamicButtons  from "./QuizButtons";
+import  DynamicButtons  from "./DynamicButton";
 
 
 

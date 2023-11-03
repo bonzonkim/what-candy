@@ -15,9 +15,9 @@
     "@emotion/styled": "^11.11.0",
     "framer-motion": "^10.16.4",
     "next": "13.5.4",
+    "next-share": "^0.27.0",
     "react": "^18",
-    "react-dom": "^18",
-    "react-router-dom": "^6.18.0"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@chakra-ui/theme-tools": "^2.1.1",

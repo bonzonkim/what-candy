@@ -11,7 +11,7 @@ const StyleDiv = chakra(motion.div, {
 const Section = ({ children}:any ) => {
     return(
         <StyleDiv
-            initial={{ y: 10, opacity: 0 }}
+            initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             mb={6}
           >
