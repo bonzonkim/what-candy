@@ -4,8 +4,8 @@
 //'#ADEEE2',
 //backgroundRepeat: 'no-repeat',
 import { extendTheme } from '@chakra-ui/react';
-import { StyleFunctionProps, mode } from '@chakra-ui/theme-tools';
-import backgroundImage from '../public/tanghuruBack.png';
+//import { StyleFunctionProps, mode } from '@chakra-ui/theme-tools';
+import TanghuruBackgroundImage from '../public/tanghuruBackground.png';
 
 const colors = {
     brand: {
@@ -32,8 +32,9 @@ const colors = {
 const styles = {
     global: () => ({
         body: {
-            bg:'#f5c3bc',
-        //backgroundImage: `url(${backgroundImage.src})`,
+        backgroundImage: `url(${TanghuruBackgroundImage.src})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover'
         },
     })
 }

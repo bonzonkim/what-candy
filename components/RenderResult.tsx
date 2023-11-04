@@ -13,7 +13,8 @@ import {
     FacebookShareButton,
     RedditShareButton,
     InstagramIcon,
-    FacebookIcon
+    FacebookIcon,
+    RedditIcon
 } from 'next-share'
 
 const results = [
@@ -46,6 +47,8 @@ export default function ResultPage() {
         case 200:
             selectedFruit = 'tomato';
             break;
+        default:
+            selectedFruit = 'orange';
     }
 
 
@@ -80,6 +83,11 @@ export default function ResultPage() {
                         >
                             <FacebookIcon size={32} round />
                         </FacebookShareButton>
+                        <RedditShareButton
+                            url={'https://localhost:3000'}
+                        >
+                            <RedditIcon size={32} round />
+                        </RedditShareButton>
                     </Box>
                 </Grid>
             </Container>
