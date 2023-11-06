@@ -76,8 +76,7 @@ export default function ResultPage() {
                         <DynamicButton ButtonText="다시하기"/>
                     </Link>
                 </Grid>
-                <Grid templateColumns='repeat(3,1fr)'>
-                    <Box>
+                <Grid templateColumns='repeat(2,1fr)'>
                         <FacebookShareButton
                             url={'https://localhost:3000'}
                         >
@@ -88,7 +87,9 @@ export default function ResultPage() {
                         >
                             <RedditIcon size={32} round />
                         </RedditShareButton>
-                    </Box>
+                    <Link href='https://instagram.com' target='_blank'>
+                        <InstagramIcon size={32} round />
+                    </Link>
                 </Grid>
             </Container>
         </Box>

@@ -10,10 +10,8 @@ export default function ResultPage() {
     return (
         <Section>
             <Box
-                bgImage={"url('/tanghuru.png')"}
-                bgSize="cover"
-                bgPosition="center"
-                borderRadius="10px"
+                //backgroundColor='orange.200'
+                borderRadius='3xl'
                 p={20}
             >
                 <RenderResult/>

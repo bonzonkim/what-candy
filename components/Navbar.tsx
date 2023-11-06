@@ -23,7 +23,7 @@ const Navbar = () => {
     <Center p={14}>
        <Box
         as="nav"
-        bg="blackAlpha.50"
+        bg="transparent"
         position="fixed"
         w="100%"
         top="0"
@@ -56,7 +56,7 @@ const Navbar = () => {
                         <Button
                             leftIcon={<MdReplay/>}
                             colorScheme="blackAlpha"
-                        >다시하기</Button>
+                        >홈으로</Button>
                     </Link>
                 </Grid>
             </Container>
