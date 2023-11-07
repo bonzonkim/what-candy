@@ -60,6 +60,7 @@ export default function ResultPage() {
                 backgroundColor="whitesmoke"
                 textAlign="center"
                 borderRadius="10px"
+                className="test"
             >
                 <Heading
                     as='h1'
