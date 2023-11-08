@@ -14,7 +14,6 @@ import  DynamicButtons  from "./DynamicButton";
 export default function Quiz() {
   const router = useRouter();
   const [quizId, setQuizId] = useState(1);
-  const [point, setPoint] = useState(0);
   const [scores, setScores] = useState({
     'shinemusket': 0,
     'orange': 0,
@@ -26,7 +25,7 @@ export default function Quiz() {
 
   const quizData = [
     { question: '휴일에 집에서 쉬는걸 더 좋아하나요?', id: 1, type: 'strawberry' },
-    { question: '새로운 경험을 추구하고 모험을 즐기는 편인가요?', id: 2, type: 'blacksapphire'},
+    { question: '새로운 경험을 추구하고 모험을 즐기는 편인가요?', id: 2, type: 'blacksapphire' },
     { question: '가벼운 규칙을 어길 때가 자주 있나요?', id: 3, type: 'shinemuscat' },
     { question: '어떤 일을 시작하기전 계획을 먼저 세우는 편인가요?', id: 4, type: 'tomato'},
     { question: '어려운 결정을 내릴 때 분석적인 방식으로 생각하나요?', id: 5, type: 'tomato' },
@@ -46,7 +45,6 @@ export default function Quiz() {
    
     // 질문 대답 처리하는 함수
     const changeQuiz = (response: "yes" | "no") => {
-
     const quiz = quizData.find((item) => item.id === quizId);
 
     if (quiz) {
@@ -61,6 +59,7 @@ export default function Quiz() {
     }
   };
 
+// 질문 화면
   function renderQuiz(id: number) {
     const quiz = quizData.find((item) => item.id === id);
     if (quiz) {
@@ -98,8 +97,6 @@ for (const fruit in scores) {
     }
 }
 
-    console.log(`highestScoringFruit ${highestScoringFruit}`)
-    console.log(`highestScore ${highestScore}`)
 
   function navigateToResult() {
       router.push(`/result?fruit=${highestScoringFruit}`).then((r) => {
@@ -107,6 +104,7 @@ for (const fruit in scores) {
       });
   }
 
+//퀴즈 끝 화면
   const EndOfQuiz = () => {
     return (
       <Section>
@@ -125,13 +123,6 @@ for (const fruit in scores) {
     );
   };
 
-  console.log(quizId);
-  //console.log(`shine scores ${scores['shinemusket']}`)
-  //console.log(`orange scores ${scores['orange']}`)
-  //console.log(`tomato scores ${scores['tomato']}`)
-  //console.log(`strawberry scores ${scores['strawberry']}`)
-  //console.log(`blacksapphire scores ${scores['blacksapphire']}`)
-  //console.log(`pineapple scores ${scores['pineapple']}`)
 
   return renderQuiz(quizId);
 }
