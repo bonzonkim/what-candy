@@ -6,6 +6,7 @@
 import { extendTheme } from '@chakra-ui/react';
 //import { StyleFunctionProps, mode } from '@chakra-ui/theme-tools';
 import TanghuruBackgroundImage from '../public/tanghuruBackground.png';
+import Tanghuru1920 from '../public/tanghuru1920.png';
 
 const colors = {
     brand: {
@@ -34,7 +35,8 @@ const styles = {
         body: {
         backgroundImage: `url(${TanghuruBackgroundImage.src})`,
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover'
+        backgroundSize: 'cover',
+        backgroundAttachment: 'fixed'
         },
     })
 }
