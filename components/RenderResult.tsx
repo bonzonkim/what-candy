@@ -139,9 +139,6 @@ export default function ResultPage() {
                         >
                             <RedditIcon size={32} round />
                         </RedditShareButton>
-                    <Link href='https://instagram.com' target='_blank'>
-                        <InstagramIcon size={32} round />
-                    </Link>
                 </Grid>
             </Container>
         </Box>

@@ -119,11 +119,6 @@ for (const fruit in scores) {
 
 
   function navigateToResult() {
-    console.log(`score of shinemuscat ${scores.shinemuscat}`)
-    console.log(`score of orange ${scores.orange}`)
-    console.log(`score of strawberry ${scores.strawberry}`)
-    console.log(`score of tomato ${scores.tomato}`)
-    console.log(`score of blacksapphire ${scores.blacksapphire}`)
     if (highestScoringFruit === '') highestScoringFruit = 'blacksapphire';
 
       router.push(`/result?fruit=${highestScoringFruit}`).then((r) => {
