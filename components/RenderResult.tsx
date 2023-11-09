@@ -7,15 +7,9 @@ import {
     Text
 } from '@chakra-ui/react';
 import {useRouter} from 'next/router';
+import Image from 'next/image';
 import DynamicButton from '../components/DynamicButton';
 import Link from 'next/link';
-import {
-    FacebookShareButton,
-    RedditShareButton,
-    InstagramIcon,
-    FacebookIcon,
-    RedditIcon
-} from 'next-share'
 
 const results = [
     {
@@ -48,11 +42,6 @@ const results = [
         resultName: '오류가 발생했습니다. 테스트를 다시 진행해주세요.',
         resultExplanation: '오류가 발생했습니다. 테스트를 다시 진행해주세요.'
     }
-//    {
-//        fruit: 'pineapple',
-//        resultName: '파인애플',
-//        resultExplanation: '파인애플 성격 타입은 긍정적인 에너지와 융통성이 뛰어납니다. 당신은 어떤 상황에서도 긍정적으로 대처하며, 다른 이들에게 희망과 웃음을 전파합니다. 융통성 있고 다재다능한 성향으로, 어떤 상황에서도 적응력이 뛰어납니다.'
-//    },
 ];
 
 const getResult = ({ fruit }: { fruit: string }, { type }: { type: string } ) => {
@@ -109,13 +98,31 @@ export default function ResultPage() {
                 backgroundColor="whitesmoke"
                 textAlign="center"
                 borderRadius="10px"
+                p="5"
             >
                 <Heading
                     as='h1'
                     letterSpacing={'tight'}
                 >
-                당신은 {getResult({fruit: selectedFruit}, {type: 'name'})} 입니다.
+                {getResult({fruit: selectedFruit}, {type: 'name'})}
                 </Heading>
+                    <Box
+                    borderColor="gray.200"
+                    borderWidth={2}
+                    borderStyle="solid"
+                    w="130px"
+                    h="130px"
+                    display="inline-block"
+                    borderRadius="full"
+                    overflow="hidden"
+                >
+                <Image 
+                    src={`/resultFruits/${selectedFruit}.png`}
+                    alt="Result Image"
+                    width={200}
+                    height={200}
+                />
+                </Box>
                 <Text
                 >
                     {getResult({fruit: selectedFruit}, {type: 'explanation'})}
@@ -127,18 +134,6 @@ export default function ResultPage() {
                     <Link href='/exam'>
                         <DynamicButton ButtonText="다시하기"/>
                     </Link>
-                </Grid>
-                <Grid templateColumns='repeat(2,1fr)'>
-                        <FacebookShareButton
-                            url={'https://localhost:3000'}
-                        >
-                            <FacebookIcon size={32} round />
-                        </FacebookShareButton>
-                        <RedditShareButton
-                            url={'https://localhost:3000'}
-                        >
-                            <RedditIcon size={32} round />
-                        </RedditShareButton>
                 </Grid>
             </Container>
         </Box>

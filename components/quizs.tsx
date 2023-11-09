@@ -79,12 +79,12 @@ export default function Quiz() {
   };
 
 // 질문 화면
-  function renderQuiz(id: number) {
+  const renderQuiz = (id: number) => {
     const quiz = quizData.find((item) => item.id === id);
-    if (quiz) {
-      return (
+
+      return quiz ? (
         <Section>
-            <Text fontSize="2xl" mb={4}>({quiz.id}/20)번 질문</Text>
+            <Text fontSize="2xl" mb={4}>({quiz.id}/25)번 질문</Text>
             <Box
             bgGradient="linear(red.100 0%, orange.100 25%, yellow.100 50%)"
             borderRadius="15px"
@@ -100,10 +100,7 @@ export default function Quiz() {
                 </Grid>
             </Box>
         </Section>
-      );
-    } else {
-      return <EndOfQuiz />;
-    }
+      ) : <EndOfQuiz />;
   }
 
 let highestScore = 0;
