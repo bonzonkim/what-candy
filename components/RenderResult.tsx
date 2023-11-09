@@ -44,10 +44,15 @@ const results = [
         resultExplanation: '블랙사파이어 성격 타입은 신비로운 퍼스널리티를 가지고 있습니다. 당신은 다른 이들에게 어려운 문제를 해결하는 데 도움이 되는 지혜와 창의성을 제공합니다. 당신은 언제나 미지의 영역을 탐험하고 새로운 것을 발견하기를 즐깁니다.'
     },
     {
-        fruit: 'pineapple',
-        resultName: '파인애플',
-        resultExplanation: '파인애플 성격 타입은 긍정적인 에너지와 융통성이 뛰어납니다. 당신은 어떤 상황에서도 긍정적으로 대처하며, 다른 이들에게 희망과 웃음을 전파합니다. 융통성 있고 다재다능한 성향으로, 어떤 상황에서도 적응력이 뛰어납니다.'
-    },
+        fruit: 'error',
+        resultName: '오류가 발생했습니다. 테스트를 다시 진행해주세요.',
+        resultExplanation: '오류가 발생했습니다. 테스트를 다시 진행해주세요.'
+    }
+//    {
+//        fruit: 'pineapple',
+//        resultName: '파인애플',
+//        resultExplanation: '파인애플 성격 타입은 긍정적인 에너지와 융통성이 뛰어납니다. 당신은 어떤 상황에서도 긍정적으로 대처하며, 다른 이들에게 희망과 웃음을 전파합니다. 융통성 있고 다재다능한 성향으로, 어떤 상황에서도 적응력이 뛰어납니다.'
+//    },
 ];
 
 const getResult = ({ fruit }: { fruit: string }, { type }: { type: string } ) => {
@@ -56,6 +61,9 @@ const getResult = ({ fruit }: { fruit: string }, { type }: { type: string } ) =>
 
     if (type === 'name') {
         returnValue = result?.resultName;
+        if (fruit === 'error') {
+            return;
+        }
     } else if (type === 'explanation') {
         returnValue = result?.resultExplanation;
     }
@@ -86,10 +94,10 @@ export default function ResultPage() {
         case 'blacksapphire':
             selectedFruit = 'blacksapphire';
             break;
-        case 'pineapple':
-            selectedFruit = 'pineapple';
-            break;
-        default: selectedFruit = '결과를 찾을 수 없음';
+//        case 'pineapple':
+//            selectedFruit = 'pineapple';
+//            break;
+        default: selectedFruit = 'error';
     }
 
 
