@@ -8,8 +8,12 @@ import Section from './Section';
 import Link from 'next/link';
 import { useRouter} from 'next/router';
 import  DynamicButtons  from "./DynamicButton";
+import styled from "@emotion/styled";
 
 
+const CustomText = styled(Text)`
+    font-family: 'Jua', sans-serif;
+`;
 
 export default function Quiz() {
   const router = useRouter();
@@ -84,12 +88,12 @@ export default function Quiz() {
 
       return quiz ? (
         <Section>
-            <Text fontSize="2xl" mb={4}>({quiz.id}/25)번 질문</Text>
+            <CustomText fontSize="2xl" mb={4}>({quiz.id}/25)</CustomText>
             <Box
             bgGradient="linear(red.100 0%, orange.100 25%, yellow.100 50%)"
             borderRadius="15px"
             p={4} textAlign="center" >
-              <Text fontSize="2xl" mb={4}>{quiz.question}</Text>
+              <CustomText fontSize="2xl" mb={4}>{quiz.question}</CustomText>
                 <Grid templateColumns='repeat(2,1fr)'>
                     <Box>
                         <DynamicButtons onClick={() => changeQuiz("yes")} ButtonText="YES" />
