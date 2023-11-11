@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-    Text,
     Box,
     Grid
 } from '@chakra-ui/react';
@@ -8,7 +7,7 @@ import Section from './Section';
 import Link from 'next/link';
 import { useRouter} from 'next/router';
 import  DynamicButtons  from "./DynamicButton";
-import  { QuizText } from "../components/fonts";
+import  { QuizText } from "../components/Fonts";
 
 
 

@@ -1,15 +1,15 @@
-import { Button } from "@chakra-ui/react"
+import { DynamicButton } from "../components/Fonts"
 import React from "react"
 
-const DynamicButtons = ({onClick, ButtonText,p}: any) => {
+const DynamicButtons = ({onClick, ButtonText, p}: any) => {
     return (
-    <Button 
+    <DynamicButton 
         onClick={onClick}
         p={p}
         background="red.200"
         size="lg"
         >
-        {ButtonText} </Button>
+        {ButtonText} </DynamicButton>
     )
 }
 

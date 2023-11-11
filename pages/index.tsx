@@ -1,12 +1,11 @@
 import React from "react";
 import {
         Box,
-        Button,
         Container,
         } from '@chakra-ui/react';
 import Link from 'next/link';
 import Section from '../components/Section';
-import { QuizText } from '../components/fonts';
+import { DynamicButton, QuizText } from '../components/Fonts';
 
 
 
@@ -26,10 +25,10 @@ export default function Home() {
                                 >
                             나와 닮은 탕후루는?!</QuizText>
                             <Link href="/exam">
-                                <Button
+                                <DynamicButton
                                 background="red.200"
                                 size="lg">
-                                시작하기</Button>
+                                시작하기</DynamicButton>
                             </Link>
                     </Box>
                 </Section>

@@ -1,14 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
     Box,
     Container,
-    Grid,
-    Heading,
-    Text
 } from '@chakra-ui/react';
 import {useRouter} from 'next/router';
 import Image from 'next/image';
 import DynamicButton from '../components/DynamicButton';
+import { QuizText, ResultHeading } from '../components/Fonts';
+import KakaoShareButton from "@/components/KakaoShareButton";
 import Link from 'next/link';
 
 const results = [
@@ -60,6 +59,7 @@ const getResult = ({ fruit }: { fruit: string }, { type }: { type: string } ) =>
 };
 
 
+
 export default function ResultPage() {
 
     const router = useRouter();
@@ -83,13 +83,18 @@ export default function ResultPage() {
         case 'blacksapphire':
             selectedFruit = 'blacksapphire';
             break;
-//        case 'pineapple':
-//            selectedFruit = 'pineapple';
-//            break;
         default: selectedFruit = 'error';
     }
 
-
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = 'https://developers.kakao.com/sdk/js/kakao.js';
+        script.async = true;
+        document.body.appendChild(script);
+        return () => {
+            document.body.removeChild(script);
+        };
+    }, []);
 
     return (
         <Box>
@@ -98,16 +103,12 @@ export default function ResultPage() {
                 backgroundColor="whitesmoke"
                 textAlign="center"
                 borderRadius="10px"
-                p="5"
+                p={5}
             >
-                <Heading
-                    as='h1'
-                    letterSpacing={'tight'}
-                >
+                <ResultHeading>
                 {getResult({fruit: selectedFruit}, {type: 'name'})}
-                </Heading>
+                </ResultHeading>
                     <Box
-                    borderColor="gray.200"
                     borderWidth={2}
                     borderStyle="solid"
                     w="130px"
@@ -123,18 +124,18 @@ export default function ResultPage() {
                     height={200}
                 />
                 </Box>
-                <Text
+                <Box
+                    p={5}
                 >
-                    {getResult({fruit: selectedFruit}, {type: 'explanation'})}
-                </Text>
-                <Grid templateColumns='repeat(2,1fr)'>
+                    <QuizText
+                    >
+                        {getResult({fruit: selectedFruit}, {type: 'explanation'})}
+                    </QuizText>
+                </Box>
                     <Link href='/'>
                         <DynamicButton ButtonText="홈으로"/>
                     </Link>
-                    <Link href='/exam'>
-                        <DynamicButton ButtonText="다시하기"/>
-                    </Link>
-                </Grid>
+                    <KakaoShareButton/>
             </Container>
         </Box>
     );
