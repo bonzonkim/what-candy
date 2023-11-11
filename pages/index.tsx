@@ -3,9 +3,10 @@ import {
         Box,
         Button,
         Container,
-        Text } from '@chakra-ui/react';
+        } from '@chakra-ui/react';
 import Link from 'next/link';
 import Section from '../components/Section';
+import { QuizText } from '../components/fonts';
 
 
 
@@ -19,11 +20,11 @@ export default function Home() {
                             borderRadius="15px"
                             p={4}
                             textAlign="center">
-                                <Text fontSize="3xl"
+                                <QuizText fontSize="3xl"
                                       mb={4}
                                       color="black"   
                                 >
-                            나와 닮은 탕후루는?!</Text>
+                            나와 닮은 탕후루는?!</QuizText>
                             <Link href="/exam">
                                 <Button
                                 background="red.200"
