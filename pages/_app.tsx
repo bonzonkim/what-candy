@@ -5,7 +5,11 @@ import Layout from '../components/layouts/main';
 import { AnimatePresence } from 'framer-motion';
 import '../public/font.css'
 
-
+declare global {
+    interface Window {
+        Kakao: any;
+    }
+}
 const App = ({ Component, pageProps }: AppProps) => {
   return(
         <ChakraProvider theme={Theme} >
