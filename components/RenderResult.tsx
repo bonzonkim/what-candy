@@ -7,7 +7,6 @@ import {useRouter} from 'next/router';
 import Image from 'next/image';
 import DynamicButton from '../components/DynamicButton';
 import { QuizText, ResultHeading } from '../components/Fonts';
-import KakaoShareButton from "@/components/KakaoShareButton";
 import Link from 'next/link';
 
 const results = [
@@ -135,7 +134,6 @@ export default function ResultPage() {
                     <Link href='/'>
                         <DynamicButton ButtonText="홈으로"/>
                     </Link>
-                    <KakaoShareButton/>
             </Container>
         </Box>
     );
