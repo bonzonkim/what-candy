@@ -85,16 +85,6 @@ export default function ResultPage() {
         default: selectedFruit = 'error';
     }
 
-    useEffect(() => {
-        const script = document.createElement('script');
-        script.src = 'https://developers.kakao.com/sdk/js/kakao.js';
-        script.async = true;
-        document.body.appendChild(script);
-        return () => {
-            document.body.removeChild(script);
-        };
-    }, []);
-
     return (
         <Box>
             <Container
@@ -131,7 +121,7 @@ export default function ResultPage() {
                         {getResult({fruit: selectedFruit}, {type: 'explanation'})}
                     </QuizText>
                 </Box>
-                    <Link href='/'>
+                    <Link href="/">
                         <DynamicButton ButtonText="홈으로"/>
                     </Link>
             </Container>
