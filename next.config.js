@@ -2,7 +2,6 @@
 
 module.exports = {
   distDir: '.build',
-  // assetPrefix: 'https://developers.kakao.com/sdk/js/kakao.js',
   async headers(){
     return [
       {
