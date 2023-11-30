@@ -34,7 +34,11 @@ export default function ResultPage() {
         case 'blacksapphire':
             selectedFruit = 'blacksapphire';
             break;
+        case '':
+            selectedFruit = 'blacksapphire';
+            break;
         default: selectedFruit = 'error';
+
     }
 
     return (
