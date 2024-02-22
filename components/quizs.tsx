@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { useRouter} from 'next/router';
 import  DynamicButtons  from "./DynamicButton";
 import  { QuizText } from "../components/Fonts";
-import { quizData } from "../data/quizData";
+import { quizData, quizDataProps } from "../data/quizData";
 
 
 
@@ -27,7 +27,7 @@ export default function Quiz() {
 
     // 질문 대답 처리하는 함수
     const changeQuiz = (response: "yes" | "no") => {
-    const quiz = quizData.find((item) => item.id === quizId);
+    const quiz = quizData.find((item: quizDataProps) => item.id === quizId);
 
     if (quiz) {
       // 응답이 yes면 해당 과일에 점수 누적
@@ -43,7 +43,7 @@ export default function Quiz() {
 
 // 질문 화면
   const renderQuiz = (id: number) => {
-    const quiz = quizData.find((item) => item.id === id);
+    const quiz = quizData.find((item: quizDataProps) => item.id === id);
 
       return quiz ? (
         <Section>
