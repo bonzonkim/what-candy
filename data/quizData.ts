@@ -4,7 +4,13 @@
 //토마토 - 결단 열정 능력 끈기 열정 해결책
 //블랙사파이어 - 신비 문제 해결 탐구 새로운영역 탐구 
 
-export const quizData = [
+export interface quizDataProps {
+  question: string;
+  id: number;
+  type: string
+}
+
+export const quizData: quizDataProps[] = [
     { question: '어떤 상황에서도 긍정적인 마인드를 유지하려 하나요?', id: 1, type: 'shinemuscat' },
     { question: '타인의 감정에 민감하게 반응하는 편인가요?', id: 2 , type: 'orange'},
     { question: '새로운 활동이나 장소를 찾아다니시나요?', id: 3, type: 'strawberry'},

@@ -1,4 +1,10 @@
-export const results = [
+interface resultDataProps {
+  fruit: string;
+  resultName: string;
+  resultExplanation: string;
+}
+
+export const results: resultDataProps[] = [
     {
         fruit: 'shinemuscat',
         resultName: '샤인머스켓',
@@ -35,13 +41,16 @@ export const getResult = ({ fruit }: { fruit: string }, { type }: { type: string
     const result = results.find(item => item.fruit === fruit);
     let returnValue: string | undefined = '';
 
-    if (type === 'name') {
-        returnValue = result?.resultName;
-        if (fruit === 'error') {
-            return;
-        }
-    } else if (type === 'explanation') {
-        returnValue = result?.resultExplanation;
-    }
+      switch(type) {
+        case 'name':
+          returnValue = result?.resultName;
+          break;
+        case 'explanation':
+          returnValue = result?.resultExplanation;
+          break;
+        default:
+          return;
+      }
+
     return returnValue
 };
